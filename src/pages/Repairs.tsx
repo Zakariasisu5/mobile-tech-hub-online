@@ -136,6 +136,13 @@ const Repairs = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
         <div className="text-center mb-12">
+          <div className="mb-8">
+            <img
+              src="/lovable-uploads/69478cb6-5eb6-44a4-ad53-19bebf8248eb.png"
+              alt="Professional Phone Repair Tools"
+              className="w-full max-w-lg mx-auto rounded-lg shadow-lg"
+            />
+          </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Repair Services</h1>
           <p className="text-lg text-gray-600 mb-8">
             Professional smartphone repair services with warranty included

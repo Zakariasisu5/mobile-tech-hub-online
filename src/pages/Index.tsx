@@ -124,9 +124,9 @@ const Index = () => {
             </div>
             <div className="relative animate-scale-in">
               <img
-                src="/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png"
+                src="/lovable-uploads/aa576642-ff27-420e-9b6b-f2c67ec15138.png"
                 alt="Professional Phone Repair Services"
-                className="w-full max-w-md mx-auto drop-shadow-2xl"
+                className="w-full max-w-md mx-auto drop-shadow-2xl rounded-lg"
               />
             </div>
           </div>
