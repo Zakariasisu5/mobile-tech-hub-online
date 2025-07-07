@@ -135,24 +135,25 @@ const Repairs = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white pt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Page Header */}
-        <div className="text-center mb-12">
-          <div className="mb-8">
-            <img
-              src="/lovable-uploads/69478cb6-5eb6-44a4-ad53-19bebf8248eb.png"
-              alt="Professional Phone Repair Tools"
-              className="w-full max-w-lg mx-auto rounded-lg shadow-lg"
-            />
+        <div 
+          className="relative text-center mb-12 py-20 rounded-lg overflow-hidden bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(/lovable-uploads/69478cb6-5eb6-44a4-ad53-19bebf8248eb.png)',
+          }}
+        >
+          <div className="absolute inset-0 bg-blue-900/75"></div>
+          <div className="relative z-10">
+            <h1 className="text-4xl font-bold text-white mb-4">Repair Services</h1>
+            <p className="text-lg text-blue-100 mb-8">
+              Professional smartphone repair services with warranty included
+            </p>
+            <Link to="/booking">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 font-semibold">
+                Book a Repair Now
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Repair Services</h1>
-          <p className="text-lg text-gray-600 mb-8">
-            Professional smartphone repair services with warranty included
-          </p>
-          <Link to="/booking">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600">
-              Book a Repair Now
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </Link>
         </div>
 
         {/* Features Section */}

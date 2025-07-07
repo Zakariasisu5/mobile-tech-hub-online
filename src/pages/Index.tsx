@@ -88,7 +88,13 @@ const Index = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 text-white">
-        <div className="absolute inset-0 bg-black/10"></div>
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(/lovable-uploads/aa576642-ff27-420e-9b6b-f2c67ec15138.png)',
+          }}
+        ></div>
+        <div className="absolute inset-0 bg-blue-900/80"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
@@ -122,12 +128,8 @@ const Index = () => {
                 </Link>
               </div>
             </div>
-            <div className="relative animate-scale-in">
-              <img
-                src="/lovable-uploads/aa576642-ff27-420e-9b6b-f2c67ec15138.png"
-                alt="Professional Phone Repair Services"
-                className="w-full max-w-md mx-auto drop-shadow-2xl rounded-lg"
-              />
+            <div className="relative animate-scale-in lg:block hidden">
+              <div className="w-full max-w-md mx-auto h-64 bg-white/10 rounded-lg backdrop-blur-sm"></div>
             </div>
           </div>
         </div>
