@@ -6,6 +6,9 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Search, Filter, Star, ShoppingCart } from "lucide-react";
+import iphoneProductImage from "@/assets/iphone-product.jpg";
+import samsungProductImage from "@/assets/samsung-product.jpg";
+import otherPhonesProductImage from "@/assets/other-phones-product.jpg";
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -21,7 +24,7 @@ const Products = () => {
       category: "iphone",
       price: 1199,
       originalPrice: 1299,
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: iphoneProductImage,
       rating: 4.8,
       reviews: 124,
       features: ["A17 Pro Chip", "48MP Camera", "Titanium Design"],
@@ -34,7 +37,7 @@ const Products = () => {
       category: "iphone",
       price: 799,
       originalPrice: 899,
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: iphoneProductImage,
       rating: 4.7,
       reviews: 89,
       features: ["A16 Bionic", "48MP Main Camera", "USB-C"],
@@ -47,7 +50,7 @@ const Products = () => {
       category: "iphone",
       price: 899,
       originalPrice: 999,
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: iphoneProductImage,
       rating: 4.6,
       reviews: 156,
       features: ["A16 Bionic", "Dynamic Island", "Pro Camera System"],
@@ -61,7 +64,7 @@ const Products = () => {
       category: "samsung",
       price: 1199,
       originalPrice: 1299,
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: samsungProductImage,
       rating: 4.7,
       reviews: 98,
       features: ["Snapdragon 8 Gen 3", "200MP Camera", "S Pen Included"],
@@ -74,7 +77,7 @@ const Products = () => {
       category: "samsung",
       price: 799,
       originalPrice: 899,
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: samsungProductImage,
       rating: 4.5,
       reviews: 67,
       features: ["Snapdragon 8 Gen 3", "50MP Camera", "7 Years Updates"],
@@ -87,7 +90,7 @@ const Products = () => {
       category: "samsung",
       price: 399,
       originalPrice: 449,
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: samsungProductImage,
       rating: 4.3,
       reviews: 45,
       features: ["Exynos 1380", "50MP Triple Camera", "5000mAh Battery"],
@@ -101,7 +104,7 @@ const Products = () => {
       category: "others",
       price: 999,
       originalPrice: 1099,
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: otherPhonesProductImage,
       rating: 4.6,
       reviews: 78,
       features: ["Tensor G3", "AI Photography", "7 Years Updates"],
@@ -114,7 +117,7 @@ const Products = () => {
       category: "others",
       price: 799,
       originalPrice: 899,
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: otherPhonesProductImage,
       rating: 4.4,
       reviews: 56,
       features: ["Snapdragon 8 Gen 3", "50MP Hasselblad", "100W Fast Charging"],
