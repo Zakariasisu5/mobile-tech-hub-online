@@ -6,9 +6,14 @@ import { Badge } from "@/components/ui/badge";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
 import { Search, Filter, Star, ShoppingCart } from "lucide-react";
-import iphoneProductImage from "@/assets/iphone-product.jpg";
-import samsungProductImage from "@/assets/samsung-product.jpg";
-import otherPhonesProductImage from "@/assets/other-phones-product.jpg";
+import iphone15ProMaxImage from "@/assets/iphone-15-pro-max.jpg";
+import iphone15Image from "@/assets/iphone-15.jpg";
+import iphone14ProImage from "@/assets/iphone-14-pro.jpg";
+import samsungS24UltraImage from "@/assets/samsung-s24-ultra.jpg";
+import samsungS24Image from "@/assets/samsung-s24.jpg";
+import samsungA54Image from "@/assets/samsung-a54.jpg";
+import pixel8ProImage from "@/assets/pixel-8-pro.jpg";
+import oneplus12Image from "@/assets/oneplus-12.jpg";
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -24,7 +29,7 @@ const Products = () => {
       category: "iphone",
       price: 1199,
       originalPrice: 1299,
-      image: iphoneProductImage,
+      image: iphone15ProMaxImage,
       rating: 4.8,
       reviews: 124,
       features: ["A17 Pro Chip", "48MP Camera", "Titanium Design"],
@@ -37,7 +42,7 @@ const Products = () => {
       category: "iphone",
       price: 799,
       originalPrice: 899,
-      image: iphoneProductImage,
+      image: iphone15Image,
       rating: 4.7,
       reviews: 89,
       features: ["A16 Bionic", "48MP Main Camera", "USB-C"],
@@ -50,7 +55,7 @@ const Products = () => {
       category: "iphone",
       price: 899,
       originalPrice: 999,
-      image: iphoneProductImage,
+      image: iphone14ProImage,
       rating: 4.6,
       reviews: 156,
       features: ["A16 Bionic", "Dynamic Island", "Pro Camera System"],
@@ -64,7 +69,7 @@ const Products = () => {
       category: "samsung",
       price: 1199,
       originalPrice: 1299,
-      image: samsungProductImage,
+      image: samsungS24UltraImage,
       rating: 4.7,
       reviews: 98,
       features: ["Snapdragon 8 Gen 3", "200MP Camera", "S Pen Included"],
@@ -77,7 +82,7 @@ const Products = () => {
       category: "samsung",
       price: 799,
       originalPrice: 899,
-      image: samsungProductImage,
+      image: samsungS24Image,
       rating: 4.5,
       reviews: 67,
       features: ["Snapdragon 8 Gen 3", "50MP Camera", "7 Years Updates"],
@@ -90,7 +95,7 @@ const Products = () => {
       category: "samsung",
       price: 399,
       originalPrice: 449,
-      image: samsungProductImage,
+      image: samsungA54Image,
       rating: 4.3,
       reviews: 45,
       features: ["Exynos 1380", "50MP Triple Camera", "5000mAh Battery"],
@@ -104,7 +109,7 @@ const Products = () => {
       category: "others",
       price: 999,
       originalPrice: 1099,
-      image: otherPhonesProductImage,
+      image: pixel8ProImage,
       rating: 4.6,
       reviews: 78,
       features: ["Tensor G3", "AI Photography", "7 Years Updates"],
@@ -117,7 +122,7 @@ const Products = () => {
       category: "others",
       price: 799,
       originalPrice: 899,
-      image: otherPhonesProductImage,
+      image: oneplus12Image,
       rating: 4.4,
       reviews: 56,
       features: ["Snapdragon 8 Gen 3", "50MP Hasselblad", "100W Fast Charging"],
