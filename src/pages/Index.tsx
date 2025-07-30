@@ -116,13 +116,13 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/booking">
-                  <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 hover:scale-105 shadow-lg min-w-[180px]">
+                  <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-400 text-white hover:from-orange-600 hover:to-orange-500 hover:scale-105 shadow-lg min-w-[180px]">
                     Book a Repair
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </Link>
                 <Link to="/products">
-                  <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 hover:scale-105 shadow-lg min-w-[180px]">
+                  <Button size="lg" className="bg-gradient-to-r from-yellow-500 to-yellow-400 text-white hover:from-yellow-600 hover:to-yellow-500 hover:scale-105 shadow-lg min-w-[180px]">
                     Browse Phones
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
