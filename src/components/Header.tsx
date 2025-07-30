@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ export const Header = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-blue-100 shadow-sm">
+    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -51,6 +52,7 @@ export const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
+            <ThemeToggle />
             <Link to="/booking">
               <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50">
                 Book Repair
