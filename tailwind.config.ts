@@ -66,7 +66,8 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				'color-bg': 'hsl(var(--color-bg))'
+				'color-bg': 'hsl(var(--color-bg))',
+				'gradient-bg': 'var(--gradient-bg)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
