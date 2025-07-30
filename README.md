@@ -1,73 +1,67 @@
-# Welcome to your Lovable project
+# 📱 FixPhone Pro – Phone Repair & Sales Website
 
-## Project info
+A clean, modern, and responsive website for a phone repair and sales business. Built to help customers book repairs, browse phone models, and view service pricing with ease.
 
-**URL**: https://lovable.dev/projects/9f3d2ae8-3e85-4810-999c-cf1e4a780dfd
+🔗 **Live Site:** [https://fix-phone-pro.vercel.app](https://fix-phone-pro.vercel.app)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Features
 
-**Use Lovable**
+- **Fast & Reliable UI** – Smooth, responsive design for all devices
+- **Repair Booking System** – Clear call-to-action for booking repairs
+- **Shop by Brand** – Categorized phone listings (iPhone, Samsung, Others)
+- **Service Pricing Section** – Transparent pricing for all major repair services
+- **Why Choose Us Section** – Highlights trust, warranty, and professional support
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/9f3d2ae8-3e85-4810-999c-cf1e4a780dfd) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🛠 Tech Stack
 
-**Use your preferred IDE**
+- **HTML5** / **CSS3**
+- **Tailwind CSS**
+- **JavaScript**
+- **Vite** / **React** *(if used)*
+- **Hosted on Vercel**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📂 Folder Structure (Basic)
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📸 Screenshots
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+![Uploading Screenshot_20250730-164246.png…]()
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+---
+
+## ✨ How to Use Locally
+
+```bash
+# Clone the project
+git clone https://github.com/your-username/fix-phone-pro.git
+
+# Navigate to the folder
+cd fix-phone-pro
+
+# Install dependencies
+npm install
+
+# Run the project
 npm run dev
-```
 
-**Edit a file directly in GitHub**
+📦 Deployment
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Deployed with Vercel for fast, serverless hosting and easy CI/CD integration.
 
-**Use GitHub Codespaces**
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+📬 Contact
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/9f3d2ae8-3e85-4810-999c-cf1e4a780dfd) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+For support or collaboration:
+Zakaria Sisu
+📧 zakariasisu5@gmail.com
+🔗 GitHub
