@@ -2,8 +2,44 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Users, Award, MapPin, Clock, Shield } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import founderAlex from "@/assets/founder-alex.jpg";
+import teamSarah from "@/assets/team-sarah.jpg";
+import teamGroup from "@/assets/team-group.jpg";
+import teamWorkspace from "@/assets/team-workspace.jpg";
 
 const About = () => {
+  const [visibleSections, setVisibleSections] = useState<Set<number>>(new Set());
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    
+    sectionRefs.current.forEach((ref, index) => {
+      if (ref) {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setVisibleSections(prev => new Set([...prev, index]));
+            }
+          },
+          { threshold: 0.2, rootMargin: "-50px" }
+        );
+        observer.observe(ref);
+        observers.push(observer);
+      }
+    });
+
+    return () => observers.forEach(observer => observer.disconnect());
+  }, []);
+
+  const getSectionClass = (index: number) => {
+    return `transition-all duration-700 ${
+      visibleSections.has(index) 
+        ? 'opacity-100 translate-y-0' 
+        : 'opacity-0 translate-y-8'
+    }`;
+  };
   const stats = [
     { icon: <Users className="w-8 h-8 text-blue-600" />, value: "10,000+", label: "Happy Customers" },
     { icon: <Award className="w-8 h-8 text-blue-600" />, value: "8+", label: "Years Experience" },
@@ -17,21 +53,21 @@ const About = () => {
       role: "Master Technician & Owner",
       experience: "8+ years",
       specialties: ["iPhone Repair", "Micro-soldering", "Data Recovery"],
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: founderAlex,
     },
     {
       name: "Sarah Chen",
       role: "Senior Repair Specialist",
       experience: "6+ years",
       specialties: ["Samsung Repair", "Water Damage", "Screen Replacement"],
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: teamSarah,
     },
     {
       name: "Mike Johnson",
       role: "Customer Service Manager",
       experience: "5+ years",
       specialties: ["Customer Relations", "Quality Assurance", "Training"],
-      image: "/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png",
+      image: teamGroup,
     },
   ];
 
@@ -70,7 +106,10 @@ const About = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white pt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className="text-center mb-16">
+        <div 
+          ref={el => sectionRefs.current[0] = el}
+          className={`text-center mb-16 ${getSectionClass(0)}`}
+        >
           <h1 className="text-4xl font-bold text-gray-900 mb-4">About PhoneFix Pro</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Your trusted local smartphone repair experts, serving the community with professional 
@@ -79,7 +118,10 @@ const About = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div 
+          ref={el => sectionRefs.current[1] = el}
+          className={`grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 ${getSectionClass(1)}`}
+        >
           {stats.map((stat, index) => (
             <Card key={index} className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -96,7 +138,10 @@ const About = () => {
         </div>
 
         {/* Our Story */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div 
+          ref={el => sectionRefs.current[2] = el}
+          className={`grid lg:grid-cols-2 gap-12 items-center mb-16 ${getSectionClass(2)}`}
+        >
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
             <div className="space-y-4 text-gray-600">
@@ -119,7 +164,7 @@ const About = () => {
           </div>
           <div className="relative">
             <img
-              src="/lovable-uploads/17537d8c-183e-4f40-a10b-8227a6618da7.png"
+              src={teamWorkspace}
               alt="PhoneFix Pro Workshop"
               className="rounded-lg shadow-lg w-full"
             />
@@ -131,7 +176,10 @@ const About = () => {
         </div>
 
         {/* Our Values */}
-        <div className="mb-16">
+        <div 
+          ref={el => sectionRefs.current[3] = el}
+          className={`mb-16 ${getSectionClass(3)}`}
+        >
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Values</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
@@ -151,7 +199,10 @@ const About = () => {
         </div>
 
         {/* Team Section */}
-        <div className="mb-16">
+        <div 
+          ref={el => sectionRefs.current[4] = el}
+          className={`mb-16 ${getSectionClass(4)}`}
+        >
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Meet Our Team</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
@@ -188,7 +239,10 @@ const About = () => {
         </div>
 
         {/* Certifications */}
-        <div className="bg-white rounded-lg p-8 mb-16">
+        <div 
+          ref={el => sectionRefs.current[5] = el}
+          className={`bg-white rounded-lg p-8 mb-16 ${getSectionClass(5)}`}
+        >
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Certifications & Partnerships</h2>
           <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-4">
             {certifications.map((cert, index) => (
@@ -203,7 +257,10 @@ const About = () => {
         </div>
 
         {/* Location */}
-        <Card className="mb-16">
+        <Card 
+          ref={el => sectionRefs.current[6] = el}
+          className={`mb-16 ${getSectionClass(6)}`}
+        >
           <CardHeader className="text-center">
             <CardTitle className="flex items-center justify-center">
               <MapPin className="w-6 h-6 mr-2 text-blue-600" />
